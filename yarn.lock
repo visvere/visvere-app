@@ -964,35 +964,35 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@lightningrodlabs/we-rust-utils-darwin-arm64@0.400.1":
-  version "0.400.1"
-  resolved "https://registry.yarnpkg.com/@lightningrodlabs/we-rust-utils-darwin-arm64/-/we-rust-utils-darwin-arm64-0.400.1.tgz#4c024f18326dee2b7ed8cb9bba4503be579693e4"
-  integrity sha512-gBmkFmioy8oXN5iQySGzZq8tjfJ2SGs6X9flp3vsbYgX1gtIqFSUTsdxJz+ZjIzxsH2Jvj8Kz++/wGVuT09dPg==
+"@lightningrodlabs/we-rust-utils-darwin-arm64@0.400.0-dev.10":
+  version "0.400.0-dev.10"
+  resolved "https://registry.yarnpkg.com/@lightningrodlabs/we-rust-utils-darwin-arm64/-/we-rust-utils-darwin-arm64-0.400.0-dev.10.tgz#706fdeec886a01bfb878981bc820c0ea372cabb1"
+  integrity sha512-yM1S3OuV3qmJjZcPRDax1GcfL5GyPt7ceRQg4DvigQwkjW3QOHJ1Slt7QtX1Mf7FJW8KuqkcT8WgsWfUlQHAZQ==
 
-"@lightningrodlabs/we-rust-utils-darwin-x64@0.400.1":
-  version "0.400.1"
-  resolved "https://registry.yarnpkg.com/@lightningrodlabs/we-rust-utils-darwin-x64/-/we-rust-utils-darwin-x64-0.400.1.tgz#4518eed480e2e6edd94d2e5625706f7aa29e62c1"
-  integrity sha512-sBagev9/+YKR7wLYMOBUyZZzWMgZDieTnT7fiP5AGM1iwJ2CLMgAIQ0xiaYQFDCQ3rLg7tUdX+2iMxLrtTtQ/w==
+"@lightningrodlabs/we-rust-utils-darwin-x64@0.400.0-dev.10":
+  version "0.400.0-dev.10"
+  resolved "https://registry.yarnpkg.com/@lightningrodlabs/we-rust-utils-darwin-x64/-/we-rust-utils-darwin-x64-0.400.0-dev.10.tgz#3c4e5f256a7a7af153f608a508f7333ada1d9979"
+  integrity sha512-OiypY/Q9JxQBAJDcMrplbQqo6IbjISPDGUigAKtmsETEYzktzVsCzQB5eRhc92i6mbbxv2jLcu0I4WsVpapJ2w==
 
-"@lightningrodlabs/we-rust-utils-linux-x64-gnu@0.400.1":
-  version "0.400.1"
-  resolved "https://registry.yarnpkg.com/@lightningrodlabs/we-rust-utils-linux-x64-gnu/-/we-rust-utils-linux-x64-gnu-0.400.1.tgz#9cdeb4b895c0486e30203bdac5de226132cf5587"
-  integrity sha512-KirgXwKi75mtVGnUzj4aYUN9US0yNM+Az0+vAD8rubPSysHV+47HL1GWLAOHqHwvQ0fT6VWOKB4qSkngJP2b7A==
+"@lightningrodlabs/we-rust-utils-linux-x64-gnu@0.400.0-dev.10":
+  version "0.400.0-dev.10"
+  resolved "https://registry.yarnpkg.com/@lightningrodlabs/we-rust-utils-linux-x64-gnu/-/we-rust-utils-linux-x64-gnu-0.400.0-dev.10.tgz#f870ecf1b99e3076a12e8156395119876e43dc1d"
+  integrity sha512-maOFyrp3xfPtcVWTqROYX17XHsMKYnQHpzj8ibShq8vINxNCUQUWIwYG4Tz4Mk+HZWbDJCOOvDxCk9t2r+iRmQ==
 
-"@lightningrodlabs/we-rust-utils-win32-x64-msvc@0.400.1":
-  version "0.400.1"
-  resolved "https://registry.yarnpkg.com/@lightningrodlabs/we-rust-utils-win32-x64-msvc/-/we-rust-utils-win32-x64-msvc-0.400.1.tgz#2113e12e73f10b5498b184580f96985477bf914c"
-  integrity sha512-t/p+Nzt+LpIJqo4oM6ofO0Kj51ptWQWzisWX3/5Ch+NDUaKZp3RODzLok+pM1vvoxsL+eyt3MaOLo5oNC8UgUg==
+"@lightningrodlabs/we-rust-utils-win32-x64-msvc@0.400.0-dev.10":
+  version "0.400.0-dev.10"
+  resolved "https://registry.yarnpkg.com/@lightningrodlabs/we-rust-utils-win32-x64-msvc/-/we-rust-utils-win32-x64-msvc-0.400.0-dev.10.tgz#dee748b8c1153a28791be0ff31a6244be7fe7cc2"
+  integrity sha512-MkkVQVGg39qEA6Sef80P5nuzER4s/pWwYfQvf8efif7KHFKri9YlF5o6l191p7ihJNuBgYzW4OlnZ/tauX30eQ==
 
-"@lightningrodlabs/we-rust-utils@0.400.1":
-  version "0.400.1"
-  resolved "https://registry.yarnpkg.com/@lightningrodlabs/we-rust-utils/-/we-rust-utils-0.400.1.tgz#d2417b7bdb3abffe4d39710a497b74a6d4e35e99"
-  integrity sha512-Dv86gqeVHg+RATe5LO3uVdElqU2SgQxD8PMc3Ao+g2CQRK/RBc5ls2CGAxFDoTlTFJgVpqT65I6BSgayCIeU7g==
+"@lightningrodlabs/we-rust-utils@0.400.0-dev.10":
+  version "0.400.0-dev.10"
+  resolved "https://registry.yarnpkg.com/@lightningrodlabs/we-rust-utils/-/we-rust-utils-0.400.0-dev.10.tgz#072b8d86357544bf88d2e24b125830db2e4d3a15"
+  integrity sha512-DWu8+Xk7fodFpBcGEP7XQeN6OvpQcpDqZkM80Z1/AvrQ2J30A+/fBKRbC0gZBt39civ1mMhPxMrpeJGiYyRY1g==
   optionalDependencies:
-    "@lightningrodlabs/we-rust-utils-darwin-arm64" "0.400.1"
-    "@lightningrodlabs/we-rust-utils-darwin-x64" "0.400.1"
-    "@lightningrodlabs/we-rust-utils-linux-x64-gnu" "0.400.1"
-    "@lightningrodlabs/we-rust-utils-win32-x64-msvc" "0.400.1"
+    "@lightningrodlabs/we-rust-utils-darwin-arm64" "0.400.0-dev.10"
+    "@lightningrodlabs/we-rust-utils-darwin-x64" "0.400.0-dev.10"
+    "@lightningrodlabs/we-rust-utils-linux-x64-gnu" "0.400.0-dev.10"
+    "@lightningrodlabs/we-rust-utils-win32-x64-msvc" "0.400.0-dev.10"
 
 "@malept/cross-spawn-promise@^1.1.0":
   version "1.1.1"
@@ -4885,7 +4885,16 @@ stat-mode@^1.0.0:
   resolved "https://registry.yarnpkg.com/stat-mode/-/stat-mode-1.0.0.tgz#68b55cb61ea639ff57136f36b216a291800d1465"
   integrity sha512-jH9EhtKIjuXZ2cWxmXS8ZP80XyC3iasQxMDV8jzhNJpfDb7VbQLVW4Wvsxz9QZvzV+G4YoSfBUVKDOyxLzi/sg==
 
-"string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+"string-width-cjs@npm:string-width@^4.2.0":
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
+  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.1"
+
+string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -4938,7 +4947,14 @@ string_decoder@^1.1.1, string_decoder@^1.3.0:
   dependencies:
     safe-buffer "~5.2.0"
 
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
+  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
+  dependencies:
+    ansi-regex "^5.0.1"
+
+strip-ansi@^6.0.0, strip-ansi@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -5402,7 +5418,16 @@ word-wrap@^1.2.5:
   resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.5.tgz#d2c45c6dd4fbce621a66f136cbe328afd0410b34"
   integrity sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==
 
-"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
+  integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
+  dependencies:
+    ansi-styles "^4.0.0"
+    string-width "^4.1.0"
+    strip-ansi "^6.0.0"
+
+wrap-ansi@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
