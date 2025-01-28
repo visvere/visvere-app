@@ -72,8 +72,7 @@ export class HolochainManager {
       signalingUrl,
       'kangaroo',
       false,
-      iceUrls,
-      undefined
+      iceUrls
     );
 
     console.log('Writing conductor-config.yaml...');
