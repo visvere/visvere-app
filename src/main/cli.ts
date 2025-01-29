@@ -1,5 +1,6 @@
 import { breakingAppVersion } from './filesystem';
 import { app } from 'electron';
+import { KANGAROO_CONFIG } from './const';
 
 export interface CliOpts {
   profile?: string;
@@ -71,7 +72,7 @@ export function validateArgs(args: CliOpts): RunOptions {
   // If provided take the one provided, otherwise check whether it's applet dev mode
   const networkSeed = args.networkSeed ? args.networkSeed : defaultAppNetworkSeed();
 
-  console.log(networkSeed);
+  console.log('networkSeed: ', networkSeed);
 
   const bootstrapUrl = args.bootstrapUrl ? new URL(args.bootstrapUrl) : undefined;
   const signalingUrl = args.signalingUrl ? new URL(args.signalingUrl) : undefined;
@@ -92,9 +93,16 @@ export function validateArgs(args: CliOpts): RunOptions {
 }
 
 function defaultAppNetworkSeed() {
-  let networkSeed = `visvere-network-${breakingAppVersion()}`;
+  let networkSeed: string;
+  if (KANGAROO_CONFIG.networkSeed) {
+    networkSeed = KANGAROO_CONFIG.networkSeed;
+  } else {
+    networkSeed = `visvere-network-${breakingAppVersion()}`;
+  }
+
   if (!app.isPackaged) {
     networkSeed += '-dev';
   }
+
   return networkSeed;
 }
