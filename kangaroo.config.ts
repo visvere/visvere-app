@@ -3,8 +3,7 @@ import { defineConfig } from './src/main/defineConfig';
 export default defineConfig({
   appId: 'org.visvere',
   productName: 'Visvere',
-  version: '0.0.5',
-  networkSeed: 'visvere-network-0.0.5',
+  version: '0.1.0',
   macOSCodeSigning: false,
   windowsEVCodeSigning: false,
   fallbackToIndexHtml: true,

@@ -1,6 +1,6 @@
 {
   "name": "org.visvere",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "license": "CAL-1.0",
   "main": "./out/main/index.js",
   "scripts": {
