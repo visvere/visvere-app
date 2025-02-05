@@ -2,14 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import url from 'url';
 import { AppAuthenticationToken, InstalledAppId } from '@holochain/client';
-import {
-  BrowserWindow,
-  NativeImage,
-  nativeImage,
-  net,
-  session,
-  shell,
-} from 'electron';
+import { BrowserWindow, NativeImage, nativeImage, net, session, shell } from 'electron';
 import { is } from '@electron-toolkit/utils';
 import { ICON_PATH, KANGAROO_CONFIG } from './const';
 import { SplashScreenType } from './types';
@@ -163,6 +156,12 @@ export function setLinkOpenHandlers(browserWindow: BrowserWindow): void {
     'connect.stripe.com',
     'newassets.hcaptcha.com',
     'hcaptcha.com',
+    'withpersona.com',
+    'cdn.withpersona.com',
+    'inquiry.withpersona.com',
+    'inquiries.withpersona.com',
+    'verify.withpersona.com',
+    'sandbox.withpersona.com',
   ];
 
   // links should open in the system default application
