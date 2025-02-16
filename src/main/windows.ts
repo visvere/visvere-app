@@ -162,6 +162,7 @@ export function setLinkOpenHandlers(browserWindow: BrowserWindow): void {
     'inquiries.withpersona.com',
     'verify.withpersona.com',
     'sandbox.withpersona.com',
+    'express-server.visvere.com',
   ];
 
   // links should open in the system default application
@@ -171,6 +172,12 @@ export function setLinkOpenHandlers(browserWindow: BrowserWindow): void {
       // ignore dev server reload
       return;
     }
+
+    const url = new URL(e.url);
+    if (allowedDomains.some((domain) => url.hostname.endsWith(domain))) {
+      return;
+    }
+
     if (
       e.url.startsWith('http://') ||
       e.url.startsWith('https://') ||
