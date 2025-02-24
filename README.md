@@ -157,3 +157,7 @@ Options:
   --print-holochain-logs         Print holochain logs directly to the terminal (they will be still written to the logfile as well)
   -h, --help                     display help for command
 ```
+
+## Additional Dev instructions
+
+You need to add env variable `SENTRY_DSN` to your github repo secrets.

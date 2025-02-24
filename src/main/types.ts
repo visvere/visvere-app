@@ -103,6 +103,12 @@ export type KangarooConfig = {
     holochain: VersionAndSha256;
     lair: VersionAndSha256;
   };
+  sentry: {
+    dsn: string;
+    tracesSampleRate: number;
+    replaysSessionSampleRate: number;
+    replaysOnErrorSampleRate: number;
+  };
 };
 
 type VersionAndSha256 = {

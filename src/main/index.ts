@@ -36,6 +36,12 @@ import { autoUpdater, UpdateCheckResult } from '@matthme/electron-updater';
 import { launch } from './launch';
 import { PasswordType, SplashScreenType } from './types';
 
+import * as Sentry from '@sentry/electron/main';
+
+Sentry.init({
+  dsn: process.env.SENTRY_DSN,
+});
+
 // Read CLI options
 
 const kangarooCli = new Command();
@@ -161,6 +167,10 @@ let LAIR_HANDLE: childProcess.ChildProcessWithoutNullStreams | undefined;
 let MAIN_WINDOW: BrowserWindow | undefined | null;
 let SPLASH_SCREEN_WINDOW: BrowserWindow | undefined;
 let IS_APP_QUITTING = false;
+
+Sentry.init({
+  dsn: 'https://7694cdaba5c3033c5323a73212b9e573@o4508871500693504.ingest.us.sentry.io/4508871880736768',
+});
 
 Menu.setApplicationMenu(kangarooMenu(KANGAROO_FILESYSTEM));
 
