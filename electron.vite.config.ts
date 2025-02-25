@@ -1,12 +1,21 @@
+import { sentryVitePlugin } from '@sentry/vite-plugin';
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite';
 import { resolve } from 'path';
 
 export default defineConfig({
   main: {
-    plugins: [externalizeDepsPlugin({ exclude: ['@holochain/client', 'get-port', 'nanoid'] })],
+    plugins: [
+      externalizeDepsPlugin({ exclude: ['@holochain/client', 'get-port', 'nanoid'] }),
+      sentryVitePlugin({
+        org: 'my-organization-mm',
+        project: 'visvere-electron',
+      }),
+    ],
   },
+
   preload: {
     build: {
+      sourcemap: true,
       rollupOptions: {
         input: {
           happ: resolve(__dirname, 'src/preload/happ.ts'),
@@ -15,8 +24,10 @@ export default defineConfig({
       },
     },
   },
+
   renderer: {
     build: {
+      sourcemap: true,
       rollupOptions: {
         input: {
           indexNotFound: resolve(__dirname, 'src/renderer/indexNotFound.html'),

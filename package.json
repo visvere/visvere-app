@@ -29,6 +29,7 @@
     "@matthme/electron-updater": "6.3.0-alpha.1",
     "@msgpack/msgpack": "^2.8.0",
     "@sentry/electron": "^6.1.0",
+    "@sentry/vite-plugin": "^3.2.1",
     "adm-zip": "0.5.14",
     "bufferutil": "4.0.8",
     "commander": "12.1.0",

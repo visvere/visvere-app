@@ -81,3 +81,5 @@ typings/
 .vite/
 
 sentry.properties
+# Sentry Config File
+.env.sentry-build-plugin
