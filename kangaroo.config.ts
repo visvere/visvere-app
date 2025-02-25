@@ -13,8 +13,6 @@ export default defineConfig({
   sentry: {
     dsn: 'https://7694cdaba5c3033c5323a73212b9e573@o4508871500693504.ingest.us.sentry.io/4508871880736768',
     tracesSampleRate: 1.0,
-    replaysSessionSampleRate: 0.1,
-    replaysOnErrorSampleRate: 1.0,
   },
   bins: {
     holochain: {

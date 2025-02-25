@@ -96,6 +96,11 @@ const RUN_OPTIONS = validateArgs(kangarooCli.opts());
 // Check whether lair is initialized or not and if not, decide based on the config
 // file whether or not to show the splashscreen or use a default password
 
+Sentry.init({
+  dsn: KANGAROO_CONFIG.sentry.dsn,
+  tracesSampleRate: KANGAROO_CONFIG.sentry.tracesSampleRate,
+});
+
 if (!app.isPackaged) {
   app.setName(KANGAROO_CONFIG.appId + '-dev');
 }
@@ -167,10 +172,6 @@ let LAIR_HANDLE: childProcess.ChildProcessWithoutNullStreams | undefined;
 let MAIN_WINDOW: BrowserWindow | undefined | null;
 let SPLASH_SCREEN_WINDOW: BrowserWindow | undefined;
 let IS_APP_QUITTING = false;
-
-Sentry.init({
-  dsn: 'https://7694cdaba5c3033c5323a73212b9e573@o4508871500693504.ingest.us.sentry.io/4508871880736768',
-});
 
 Menu.setApplicationMenu(kangarooMenu(KANGAROO_FILESYSTEM));
 

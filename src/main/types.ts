@@ -106,8 +106,6 @@ export type KangarooConfig = {
   sentry: {
     dsn: string;
     tracesSampleRate: number;
-    replaysSessionSampleRate: number;
-    replaysOnErrorSampleRate: number;
   };
 };
 

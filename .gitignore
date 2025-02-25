@@ -80,3 +80,4 @@ typings/
 # Vite
 .vite/
 
+sentry.properties
