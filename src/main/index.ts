@@ -39,7 +39,8 @@ import { PasswordType, SplashScreenType } from './types';
 import * as Sentry from '@sentry/electron/main';
 
 Sentry.init({
-  dsn: process.env.SENTRY_DSN,
+  dsn: KANGAROO_CONFIG.sentry.dsn,
+  debug: true,
 });
 
 // Read CLI options
@@ -95,11 +96,6 @@ const RUN_OPTIONS = validateArgs(kangarooCli.opts());
 
 // Check whether lair is initialized or not and if not, decide based on the config
 // file whether or not to show the splashscreen or use a default password
-
-Sentry.init({
-  dsn: KANGAROO_CONFIG.sentry.dsn,
-  tracesSampleRate: KANGAROO_CONFIG.sentry.tracesSampleRate,
-});
 
 if (!app.isPackaged) {
   app.setName(KANGAROO_CONFIG.appId + '-dev');
