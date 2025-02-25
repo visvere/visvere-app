@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import url from 'url';
 import { AppAuthenticationToken, InstalledAppId } from '@holochain/client';
-import { BrowserWindow, NativeImage, nativeImage, net, session, shell } from 'electron';
+import { BrowserWindow, ipcMain, NativeImage, nativeImage, net, session, shell } from 'electron';
 import { is } from '@electron-toolkit/utils';
 import { ICON_PATH, KANGAROO_CONFIG } from './const';
 import { SplashScreenType } from './types';
@@ -218,6 +218,10 @@ export function setLinkOpenHandlers(browserWindow: BrowserWindow): void {
     return { action: 'deny' };
   });
 }
+
+ipcMain.handle('get-version', async () => {
+  return KANGAROO_CONFIG.version;
+});
 
 export const createSplashWindow = (type: SplashScreenType): BrowserWindow => {
   let htmlFile: string;
