@@ -40,7 +40,7 @@ import * as Sentry from '@sentry/electron/main';
 
 Sentry.init({
   dsn: KANGAROO_CONFIG.sentry.dsn,
-  debug: true,
+  release: KANGAROO_CONFIG.version,
 });
 
 // Read CLI options
