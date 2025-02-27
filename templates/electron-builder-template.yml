@@ -1,5 +1,6 @@
 appId: ____PLACEHOLDER____
 productName: ____PLACEHOLDER____
+afterSign: 'scripts/after-sign.js'
 directories:
   buildResources: build
 files:
