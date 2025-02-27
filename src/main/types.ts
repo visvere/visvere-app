@@ -47,6 +47,7 @@ export type KangarooConfig = {
    * secrets to be available in the github repository.
    */
   macOSCodeSigning: boolean;
+  macOSNotarization?: boolean;
   /**
    * Whether to attempt Windows code signing with an EV certificate in CI.
    * Assumes that the relevant secrets are available in the repository

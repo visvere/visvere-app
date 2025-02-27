@@ -5,6 +5,7 @@ export default defineConfig({
   productName: 'Visvere',
   version: '0.5.5',
   macOSCodeSigning: true,
+  macOSNotarization: true,
   windowsEVCodeSigning: false,
   fallbackToIndexHtml: true,
   autoUpdates: true,
