@@ -26,11 +26,40 @@ exports.default = async function notarizing(context) {
     return;
   }
 
-  notarize({
-    appBundleId: appId,
-    appPath: appPath,
-    appleId: process.env.APPLE_ID_EMAIL,
-    appleIdPassword: process.env.APPLE_ID_PASSWORD,
-    teamId: process.env.APPLE_TEAM_ID,
-  });
+  try {
+    // Create a promise that rejects after 20 minutes
+    const timeoutPromise = new Promise((_, reject) => {
+      const timeoutId = setTimeout(() => {
+        reject(new Error('Notarization timed out after 20 minutes'));
+      }, 1200000); // 20 minutes in milliseconds
+
+      // Store the timeout ID so we can clear it if notarization completes
+      timeoutPromise.timeoutId = timeoutId;
+    });
+
+    // Create the notarization promise
+    const notarizePromise = notarize({
+      appBundleId: appId,
+      appPath: appPath,
+      appleId: process.env.APPLE_ID_EMAIL,
+      appleIdPassword: process.env.APPLE_ID_PASSWORD,
+      teamId: process.env.APPLE_TEAM_ID,
+    });
+
+    // Race the two promises - whichever completes/rejects first wins
+    await Promise.race([timeoutPromise, notarizePromise])
+      .then(() => {
+        // If notarize finishes first, clear the timeout
+        clearTimeout(timeoutPromise.timeoutId);
+        console.log(`Successfully notarized ${appId}`);
+      })
+      .catch((error) => {
+        // Clear the timeout in case of error from notarize
+        clearTimeout(timeoutPromise.timeoutId);
+        throw error;
+      });
+  } catch (error) {
+    console.error('Notarization failed:', error);
+    throw error;
+  }
 };
