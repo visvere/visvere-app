@@ -7,12 +7,6 @@ exports.default = async function notarizing(context) {
   // Only notarize on Mac
   if (process.platform !== 'darwin') return;
 
-  const kangarooConfig = require(path.join(process.cwd(), 'kangaroo.config.ts')).default;
-
-  if (kangarooConfig.macOSNotarization === false || kangarooConfig.macOSNotarization == undefined) {
-    console.log('Skipping notarization: notarization is disabled in kangaroo.config.ts');
-  }
-
   // Skip if not supposed to notarize
   const credsExist =
     process.env.APPLE_ID_EMAIL && process.env.APPLE_ID_PASSWORD && process.env.APPLE_TEAM_ID;
