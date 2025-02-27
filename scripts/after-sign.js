@@ -26,9 +26,10 @@ exports.default = async function notarizing(context) {
     return;
   }
 
+  let timeoutId;
+
   try {
-    // Create a timeout controller with clearable timeout
-    let timeoutId;
+    // Create a timeout controller
     const timeoutPromise = new Promise((_, reject) => {
       timeoutId = setTimeout(() => {
         reject(new Error('Notarization timed out after 20 minutes'));
@@ -45,16 +46,19 @@ exports.default = async function notarizing(context) {
     });
 
     // Race the two promises - whichever completes/rejects first wins
-    try {
-      await Promise.race([timeoutPromise, notarizePromise]);
-      // If we get here, notarization completed successfully
-      console.log(`Successfully notarized ${appId}`);
-    } finally {
-      // Always clear the timeout to prevent memory leaks
-      clearTimeout(timeoutId);
-    }
+    await Promise.race([timeoutPromise, notarizePromise]);
+
+    console.log(`Successfully notarized ${appId}`);
   } catch (error) {
     console.error('Notarization failed:', error);
+
+    // Explicitly throw error to ensure workflow fails
+    process.exitCode = 1;
     throw error;
+  } finally {
+    // Always clear the timeout to prevent memory leaks
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
   }
 };
