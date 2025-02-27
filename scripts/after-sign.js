@@ -26,17 +26,11 @@ exports.default = async function notarizing(context) {
     return;
   }
 
-  try {
-    await notarize({
-      appBundleId: appId,
-      appPath: appPath,
-      appleId: process.env.APPLE_ID_EMAIL,
-      appleIdPassword: process.env.APPLE_ID_PASSWORD,
-      teamId: process.env.APPLE_TEAM_ID,
-    });
-    console.log(`Successfully notarized ${appId}`);
-  } catch (error) {
-    console.error('Notarization failed:', error);
-    throw error;
-  }
+  notarize({
+    appBundleId: appId,
+    appPath: appPath,
+    appleId: process.env.APPLE_ID_EMAIL,
+    appleIdPassword: process.env.APPLE_ID_PASSWORD,
+    teamId: process.env.APPLE_TEAM_ID,
+  });
 };
