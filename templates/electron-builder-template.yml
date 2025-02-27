@@ -1,6 +1,7 @@
 appId: ____PLACEHOLDER____
 productName: ____PLACEHOLDER____
 afterSign: 'scripts/after-sign.js'
+forceCodeSigning: true
 directories:
   buildResources: build
 files:
