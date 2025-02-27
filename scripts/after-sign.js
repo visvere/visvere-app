@@ -9,9 +9,7 @@ exports.default = async function notarizing(context) {
 
   // Skip if not supposed to notarize
   const credsExist =
-    process.env.APPLE_ID_EMAIL &&
-    process.env.APPLE_APP_SPECIFIC_PASSWORD &&
-    process.env.APPLE_TEAM_ID;
+    process.env.APPLE_ID_EMAIL && process.env.APPLE_ID_PASSWORD && process.env.APPLE_TEAM_ID;
 
   if (!credsExist) {
     console.log('Skipping notarization: credentials not found');
@@ -33,7 +31,7 @@ exports.default = async function notarizing(context) {
       appBundleId: appId,
       appPath: appPath,
       appleId: process.env.APPLE_ID_EMAIL,
-      appleIdPassword: process.env.APPLE_APP_SPECIFIC_PASSWORD,
+      appleIdPassword: process.env.APPLE_ID_PASSWORD,
       teamId: process.env.APPLE_TEAM_ID,
     });
     console.log(`Successfully notarized ${appId}`);

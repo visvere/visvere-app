@@ -111,7 +111,7 @@ To use code signing on macOS for your release in CI you will have to
 
 - `APPLE_DEV_IDENTITY`
 - `APPLE_ID_EMAIL`
-- `APPLE_APP_SPECIFIC_PASSWORD`
+- `APPLE_ID_PASSWORD`
 - `APPLE_TEAM_ID`
 - `APPLE_CERTIFICATE`
 - `APPLE_CERTIFICATE_PASSWORD`
