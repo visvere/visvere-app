@@ -10,6 +10,8 @@ import {
   Tray,
   Notification,
   Event,
+  systemPreferences,
+  shell,
 } from 'electron';
 import childProcess from 'child_process';
 import { ZomeCallNapi, ZomeCallSigner, ZomeCallUnsignedNapi } from '@holochain/hc-spin-rust-utils';
@@ -38,10 +40,26 @@ import { PasswordType, SplashScreenType } from './types';
 
 import * as Sentry from '@sentry/electron/main';
 
+// My stuff
+
 Sentry.init({
   dsn: KANGAROO_CONFIG.sentry.dsn,
   release: KANGAROO_CONFIG.version,
 });
+
+const checkCameraPermission = async () => {
+  const hasCameraPermission = systemPreferences.getMediaAccessStatus('camera') === 'granted';
+  if (hasCameraPermission) return;
+
+  if (process.platform === 'darwin') {
+    const cameraGranted = await systemPreferences.askForMediaAccess('camera');
+    if (!cameraGranted) {
+      shell.openExternal('x-apple.systempreferences:com.apple.preference.security?Privacy_Camera');
+    }
+  } else if (process.platform === 'win32') {
+    shell.openExternal('ms-settings:privacy-webcam');
+  }
+};
 
 // Read CLI options
 
@@ -172,6 +190,7 @@ let IS_APP_QUITTING = false;
 Menu.setApplicationMenu(kangarooMenu(KANGAROO_FILESYSTEM));
 
 app.whenReady().then(async () => {
+  checkCameraPermission();
   /**
    * Figure out which splashscreen to show and whether to start holochain immediately.
    */
