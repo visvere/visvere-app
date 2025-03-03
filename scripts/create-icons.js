@@ -48,30 +48,30 @@ async function generateIcons() {
   // Generate the systray icon
   console.log('Generating systray icon');
   const systrayIcon = await jimp.Jimp.fromBuffer(pngBuffer);
-  systrayIcon.resize({ w: 64, h: 64 });
   const iconsDir = path.join('resources', 'icons');
+
   if (!fs.existsSync(iconsDir)) {
     fs.mkdirSync(iconsDir);
   }
 
   if (process.platform === 'darwin') {
-    // For macOS: Create template image at 16x16 and 32x32
+    // For macOS
     const macIcon = systrayIcon.clone();
-    macIcon.resize(16, 16);
-    macIcon.write(path.join(iconsDir, 'trayIconTemplate.png'));
+    await macIcon.resize({ width: 16, height: 16 });
+    await macIcon.write(path.join(iconsDir, 'trayIconTemplate.png'));
 
     const macIconX2 = systrayIcon.clone();
-    macIconX2.resize(32, 32);
-    macIconX2.write(path.join(iconsDir, 'trayIconTemplate@2x.png'));
+    await macIconX2.resize({ width: 32, height: 32 });
+    await macIconX2.write(path.join(iconsDir, 'trayIconTemplate@2x.png'));
   } else {
-    // For Windows: Keep your existing 32x32@2 size
-    systrayIcon.resize(64, 64);
-    systrayIcon.write(path.join(iconsDir, '32x32@2.png'));
+    // For Windows
+    await systrayIcon.resize({ width: 64, height: 64 });
+    await systrayIcon.write(path.join(iconsDir, '32x32@2.png'));
   }
 
   // Generate the icon for OS notifications
   console.log('Generating notifications icon');
   const icon128x128 = await jimp.Jimp.fromBuffer(pngBuffer);
-  icon128x128.resize({ w: 128, h: 128 });
-  icon128x128.write(path.join(iconsDir, '128x128.png'));
+  await icon128x128.resize({ width: 128, height: 128 });
+  await icon128x128.write(path.join(iconsDir, '128x128.png'));
 }
