@@ -3,11 +3,11 @@ import { defineConfig } from './src/main/defineConfig';
 export default defineConfig({
   appId: 'org.visvere-demo',
   productName: 'Visvere-Demo',
-  version: '0.5.8',
+  version: '0.5.9',
   macOSCodeSigning: true,
   windowsEVCodeSigning: false,
   fallbackToIndexHtml: true,
-  autoUpdates: true,
+  autoUpdates: false,
   systray: true,
   passwordMode: 'no-password',
   sentry: {
