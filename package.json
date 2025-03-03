@@ -3,6 +3,8 @@
   "version": "0.5.11",
   "license": "CAL-1.0",
   "main": "./out/main/index.js",
+  "author": "VISVERE",
+  "description": "VISVERE instantly authenticates the digital documents driving your most critical decisions.",
   "scripts": {
     "dev": "yarn write:configs && yarn pouch:unpack && yarn create:icons && electron-vite dev",
     "setup": "yarn && yarn fetch:binaries && yarn write:configs",
