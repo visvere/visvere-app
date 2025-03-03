@@ -1,3 +1,15 @@
+# Creating an update Checklist:
+
+1. Create a tag for the latest version and **Read** the section [Versioning](#versioning) below to understand the implications.
+2. `git push origin <tag>`
+3. package new happ, drag and drop into pouch folder
+4. Set the package.json and kangaroo.yaml versions to the same as the tag
+5. If the build is a production buisness demo, name the app id: `org.visvere-demo` and set the product name to `Visvere Demo`otherwise `org.visvere` and `Visvere`
+6. Set the name inside package.json to the same as the app id
+7. If production buisness demo, set auto updates to false.
+8. Create and save a new draft release on github and choose the tag you just pushed. If you are using a production buisness demo, set version to 'latest' otherwise set to 'pre-release'
+9. Commit repo changes, and push to github branch. Use `release` from prod buisness demo, or `staging` for internal testing.
+
 # Holochain-Kangaroo Electron
 
 Put your Holochain App in this Kangaroo's electron pouch and let it run.
