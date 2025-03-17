@@ -166,21 +166,21 @@ export class HolochainManager {
     if (installedApps.map((appInfo) => appInfo.installed_app_id).includes(HAPP_APP_ID)) return;
     console.log(`Installing happ...`);
     const pubKey = await this.adminWebsocket.generateAgentPubKey();
-    await this.adminWebsocket.installApp({
+    const appInfo = await this.adminWebsocket.installApp({
       agent_key: pubKey,
       installed_app_id: HAPP_APP_ID,
       path: HAPP_PATH,
       network_seed: networkSeed,
     });
-    // if (appInfo.status !== 'awaiting_memproofs') {
-    //   try {
-    //     await this.adminWebsocket.enableApp({
-    //       installed_app_id: appInfo.installed_app_id,
-    //     });
-    //   } catch (e) {
-    //     throw new Error(`Failed to enable happ: ${e}.`);
-    //   }
-    // }
+    if (appInfo.status !== 'awaiting_memproofs') {
+      try {
+        await this.adminWebsocket.enableApp({
+          installed_app_id: appInfo.installed_app_id,
+        });
+      } catch (e) {
+        throw new Error(`Failed to enable happ: ${e}.`);
+      }
+    }
     const installedAppsNew = await this.adminWebsocket.listApps({});
     this.installedApps = installedAppsNew;
     this.kangarooEmitter.emitHappInstalled();
