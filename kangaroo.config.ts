@@ -3,14 +3,17 @@ import { defineConfig } from './src/main/defineConfig';
 export default defineConfig({
   appId: 'org.visvere',
   productName: 'Visvere',
-  version: '0.7.0',
-  networkSeed: 'visvere-network-0.5.x',
+  version: '0.6.0',
   macOSCodeSigning: true,
   windowsEVCodeSigning: false,
   fallbackToIndexHtml: true,
   autoUpdates: false,
   systray: true,
   passwordMode: 'no-password',
+  sentry: {
+    dsn: 'https://7694cdaba5c3033c5323a73212b9e573@o4508871500693504.ingest.us.sentry.io/4508871880736768',
+    tracesSampleRate: 1.0,
+  },
   bins: {
     holochain: {
       version: '0.4.0-dev.20',

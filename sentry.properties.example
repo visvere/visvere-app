@@ -1,0 +1,4 @@
+defaults.url=https://sentry.io/
+defaults.org=my-organization-mm
+defaults.project=visvere-electron
+auth.token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
