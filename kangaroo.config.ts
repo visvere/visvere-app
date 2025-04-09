@@ -4,7 +4,7 @@ export default defineConfig({
   appId: 'org.visvere',
   productName: 'Visvere',
   version: '0.7.0',
-  networkSeed: 'visvere-network-0.5.x',
+  networkSeed: 'visvere-network-0.7.x',
   macOSCodeSigning: true,
   windowsEVCodeSigning: false,
   fallbackToIndexHtml: true,
