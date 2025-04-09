@@ -1,6 +1,6 @@
 {
   "name": "org.visvere",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "license": "CAL-1.0",
   "main": "./out/main/index.js",
   "author": "VISVERE",
@@ -30,8 +30,6 @@
     "@lightningrodlabs/we-rust-utils": "0.400.0-dev.10",
     "@matthme/electron-updater": "6.3.0-alpha.1",
     "@msgpack/msgpack": "^2.8.0",
-    "@sentry/electron": "^6.1.0",
-    "@sentry/vite-plugin": "^3.2.1",
     "adm-zip": "0.5.14",
     "bufferutil": "4.0.8",
     "commander": "12.1.0",

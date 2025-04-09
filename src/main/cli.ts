@@ -100,9 +100,9 @@ function defaultAppNetworkSeed() {
     networkSeed = `visvere-network-${breakingAppVersion()}`;
   }
 
-  if (!app.isPackaged) {
-    networkSeed += '-dev';
-  }
+  // if (!app.isPackaged) {
+  //   networkSeed += '-dev';
+  // }
 
   return networkSeed;
 }
