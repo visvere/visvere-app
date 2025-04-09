@@ -38,14 +38,7 @@ import { autoUpdater, UpdateCheckResult } from '@matthme/electron-updater';
 import { launch } from './launch';
 import { PasswordType, SplashScreenType } from './types';
 
-import * as Sentry from '@sentry/electron/main';
-
 // My stuff
-
-Sentry.init({
-  dsn: KANGAROO_CONFIG.sentry.dsn,
-  release: KANGAROO_CONFIG.version,
-});
 
 const checkCameraPermission = async () => {
   const hasCameraPermission = systemPreferences.getMediaAccessStatus('camera') === 'granted';

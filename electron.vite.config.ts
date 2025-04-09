@@ -1,16 +1,9 @@
-import { sentryVitePlugin } from '@sentry/vite-plugin';
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite';
 import { resolve } from 'path';
 
 export default defineConfig({
   main: {
-    plugins: [
-      externalizeDepsPlugin({ exclude: ['@holochain/client', 'get-port', 'nanoid'] }),
-      sentryVitePlugin({
-        org: 'my-organization-mm',
-        project: 'visvere-electron',
-      }),
-    ],
+    plugins: [externalizeDepsPlugin({ exclude: ['@holochain/client', 'get-port', 'nanoid'] })],
   },
 
   preload: {
